@@ -1,0 +1,13 @@
+#Find Kth largest element
+import heapq
+def find_klarge(arr,k):
+    arr=[-item for item in arr]
+    heapq.heapify(arr)
+    while k>0:
+        s=heapq.heappop(arr)
+        k=k-1
+    return s*-1
+arr=list(map(int,input("Enter list:").split()))
+k=int(input("Enter k:"))
+ans=find_klarge(arr,k)
+print(ans)
